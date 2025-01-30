@@ -25,7 +25,7 @@ while True:
         
         if data.startswith("DATA:"):
             try:
-                # Parse the sensor values (assuming the order is PM2.5, PM10, NO2, SO2, CO, O3)
+                # Parse the sensor values (assuming the order is PM2.5, PM10, H2S, SO2, CO, O3)
                 values = list(map(float, data[5:].split(',')))  # Exclude 'DATA:' prefix
                 
                 if len(values) == 6:  # Ensure we have 6 values
